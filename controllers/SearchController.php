@@ -1,5 +1,5 @@
 <?php
-namespace Coxis\App\Search\Controllers;
+namespace App\Search\Controllers;
 
 class SearchController extends \Coxis\Core\Controller {
 	/**
