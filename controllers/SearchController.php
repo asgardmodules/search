@@ -1,5 +1,5 @@
 <?php
-namespace App\Search\Controllers;
+namespace Coxis\Search\Controllers;
 
 class SearchController extends \Coxis\Core\Controller {
 	/**
@@ -18,7 +18,7 @@ class SearchController extends \Coxis\Core\Controller {
 	}
 
 	public function searchWidget() {
-		$this->form = new Form(array('action'=>\URL::url_for(array('App\Search\Controllers\search', 'index'))));
+		$this->form = new Form(array('action'=>\URL::url_for(array('Coxis\Search\Controllers\search', 'index'))));
 		$this->form->term = new TextField;
 	}
 }
