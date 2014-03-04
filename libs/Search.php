@@ -2,10 +2,10 @@
 namespace Coxis\Search\Controllers;
 
 class Search {
-	public static function searchModels($modelName, $term) {
-		$orm = $modelName::orm();
+	public static function searchEntities($entityName, $term) {
+		$orm = $entityName::orm();
 		$conditions = array();
-		foreach($modelName::propertyNames() as $prop)
+		foreach($entityName::propertyNames() as $prop)
 			$conditions[] = "$prop LIKE '%$term%'";
 		return $orm->where(array('or'=>$conditions))->get();
 	}
