@@ -1,7 +1,7 @@
 <?php
-namespace Coxis\Search\Controllers;
+namespace Asgard\Search\Controllers;
 
-class SearchController extends \Coxis\Core\Controller {
+class SearchController extends \Asgard\Core\Controller {
 	/**
 	@Route('search')
 	*/
@@ -18,7 +18,7 @@ class SearchController extends \Coxis\Core\Controller {
 	}
 
 	public function searchWidget() {
-		$this->form = new Form(array('action'=>\Coxis\Core\App::get('url')->url_for(array('Coxis\Search\Controllers\search', 'index'))));
+		$this->form = new Form(array('action'=>\Asgard\Core\App::get('url')->url_for(array('Asgard\Search\Controllers\search', 'index'))));
 		$this->form->term = new TextField;
 	}
 }

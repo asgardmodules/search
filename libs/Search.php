@@ -1,5 +1,5 @@
 <?php
-namespace Coxis\Search\Controllers;
+namespace Asgard\Search\Controllers;
 
 class Search {
 	public static function searchEntities($entityName, $term) {
