@@ -18,7 +18,7 @@ class SearchController extends \Asgard\Core\Controller {
 	}
 
 	public function searchWidget() {
-		$this->form = new Form(array('action'=>\Asgard\Core\App::get('url')->url_for(array('Asgard\Search\Controllers\search', 'index'))));
-		$this->form->term = new TextField;
+		$this->form = new \Asgard\Form\Form('search', array('action'=>\Asgard\Core\App::get('url')->url_for(array('Asgard\Search\Controllers\SearchController', 'index'))));
+		$this->form->term = new \Asgard\Form\Fields\TextField;
 	}
 }
